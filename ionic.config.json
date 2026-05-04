@@ -1,0 +1,7 @@
+{
+  "name": "SusanApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
