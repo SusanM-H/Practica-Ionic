@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SusanApp</string>
+    <string name="title_activity_main">SusanApp</string>
+    <string name="package_name">com.susan.app</string>
+    <string name="custom_url_scheme">com.susan.app</string>
+</resources>

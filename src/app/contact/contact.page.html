@@ -1,0 +1,59 @@
+<!-- Cabecera estándar de Ionic -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Contacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="content-wrapper">
+    <h1 class="page-title">¡Hablemos!</h1>
+    <p class="page-subtitle">Ponte en contacto conmigo o encuéntrame en mis redes sociales.</p>
+
+    <!-- Contenedor flex para botones de redes sociales -->
+    <div class="social-links">
+      <!-- target="_blank" asegura que el enlace abra en otra pestaña del navegador -->
+      <ion-button color="tertiary" expand="block" shape="round" href="https://instagram.com" target="_blank">
+        <!-- slot="start" ubica el ícono a la izquierda del texto del botón -->
+        <ion-icon slot="start" name="logo-instagram"></ion-icon>
+        Instagram
+      </ion-button>
+      <ion-button color="dark" expand="block" shape="round" href="https://github.com" target="_blank">
+        <ion-icon slot="start" name="logo-github"></ion-icon>
+        GitHub
+      </ion-button>
+    </div>
+
+    <!-- Contenedor de Formulario -->
+    <ion-card class="contact-card">
+      <ion-card-header>
+        <ion-card-title>Envíame un mensaje</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form>
+          <!-- Formularios en Ionic usan ion-item para cada fila/campo -->
+          <ion-item>
+            <!-- labelPlacement="floating": La etiqueta del input flota hacia arriba cuando haces foco -->
+            <ion-input label="Nombre" labelPlacement="floating" placeholder="Tu nombre completo"></ion-input>
+          </ion-item>
+          <ion-item>
+            <!-- type="email" asegura validación básica de correo electrónico -->
+            <ion-input type="email" label="Email" labelPlacement="floating" placeholder="tu@email.com"></ion-input>
+          </ion-item>
+          <ion-item>
+            <!-- ion-textarea es un input multilínea. autoGrow=true lo hace expandirse automáticamente según el texto -->
+            <ion-textarea label="Mensaje" labelPlacement="floating" placeholder="Escribe tu mensaje aquí..." [autoGrow]="true"></ion-textarea>
+          </ion-item>
+          <!-- Botón de acción principal del formulario -->
+          <ion-button class="submit-btn" expand="block" shape="round" color="primary">
+            <ion-icon slot="start" name="send-outline"></ion-icon>
+            Enviar
+          </ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

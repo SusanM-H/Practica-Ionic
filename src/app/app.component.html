@@ -1,3 +1,28 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <!-- SplitPaneDivide el contenido en dos partes -->
+  <!-- Menu: Es el menu lateral -->
+  <ion-split-pane contentId="main-content">
+    <!-- Menu: Es el menu lateral -->
+    <!-- El "type=overlay" hace que el menu se abra encima del contenido, ocultandolo. El tipo "reveal" lo empuja -->
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <!-- Encabezado del menu -->
+          <ion-list-header>Susan Molina</ion-list-header>
+          <ion-note>Portafolio Personal</ion-note>
+
+          <!-- Loop para generar las opciones del menu -->
+          <!-- En este caso, recorreremos el array appPages -->
+          <ion-menu-toggle auto-hide="false" *ngFor="let page of appPages; let i = index">
+            <ion-item routerDirection="root" [routerLink]="[page.url]" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon aria-hidden="true" slot="start" [ios]="page.icon + '-outline'" [md]="page.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ page.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <!-- Contenido principal de la aplicacion, aqui se inyectan todas las rutas -->
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>

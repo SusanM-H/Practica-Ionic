@@ -1,0 +1,60 @@
+<!-- Cabecera de la aplicación -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!-- Botón para mostrar el Menú Lateral -->
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Información Personal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Contenido Principal -->
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="content-wrapper">
+    <!-- ion-card: Componente excelente para separar y organizar bloques visuales de información -->
+    <ion-card class="info-card">
+      <ion-card-header>
+        <ion-card-title>
+          <!-- ion-icon: Muestra el ícono 'person-outline' registrado en TypeScript -->
+          <ion-icon name="person-outline"></ion-icon> Biografía
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Soy estudiante de PNFI con experiencia en el desarrollo de software. Me gusta aprender nuevas tecnologías y aplicarlas en mis proyectos.</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="info-card">
+      <ion-card-header>
+        <ion-card-title>
+          <ion-icon name="school-outline"></ion-icon> Educación
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- ion-item: Fila estándar de una lista de Ionic -->
+        <ion-item lines="none">
+          <!-- ion-label: Contenedor para textos como encabezados y párrafos descriptivos -->
+          <ion-label class="ion-text-wrap">
+            <h2>TSU en Informática</h2>
+            <p>Instituto Universitario de Tecnología de Administración Industrial (IUTA)</p>
+          </ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="info-card">
+      <ion-card-header>
+        <ion-card-title>
+          <ion-icon name="code-slash-outline"></ion-icon> Habilidades
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content class="skills-content">
+        <!-- ion-chip: Elementos visuales compactos, perfectos para etiquetas, categorías o skills -->
+        <ion-chip color="primary">Desarrollo de Software</ion-chip>
+        <ion-chip color="secondary">Desarrollo Web</ion-chip>
+        <ion-chip color="tertiary">Bases de Datos</ion-chip>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
